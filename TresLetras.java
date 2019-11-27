@@ -5,6 +5,18 @@ import java.util.Scanner;
 
 public class TresLetras {
 	
+	public static void Combinacao(char [] letras) {
+	    for(int i = 0; i < 3; i++ ){  
+	    	for( int j = 0 ; j < 3 ; j++ ){  
+	    		for( int k = 0 ; k < 3 ; k++ ){ 
+	    			if(i!=k && i!=j && k!=j) {
+	    				System.out.println("-> " + letras[i] + letras[j] + letras[k]);
+	    			}
+	    		}
+	    	}  
+	    }
+	}
+	
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		String palavra;
@@ -48,15 +60,4 @@ public class TresLetras {
 	      
 	}
 	
-	public static void Combinacao(char [] letras) {
-	    for(int i = 0; i < 3; i++ ){  
-	    	for( int j = 0 ; j < 3 ; j++ ){  
-	    		for( int k = 0 ; k < 3 ; k++ ){ 
-	    			if(i!=k && i!=j && k!=j) {
-	    				System.out.println("-> " + letras[i] + letras[j] + letras[k]);
-	    			}
-	    		}
-	    	}  
-	    }
-	}
 }
