@@ -1,0 +1,51 @@
+package school.cesar.q5;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import java.util.*;
+
+
+public class ComparaListas {
+	public static void Comparar(List<Integer> lista1, List<Integer> lista2) {
+		List<Integer> lista3 = new ArrayList<>();
+		int size1 = lista1.size();
+		int size2 = lista2.size();
+		int aux = 0;
+		
+		for (int i = 0; i < size1; i++) {
+			aux = lista1.get(i);
+            if(lista2.contains(aux)){
+            	if(!lista3.contains(aux)) {
+            		lista3.add(aux);
+            	}
+            }
+		}
+		System.out.println(lista3);
+	}
+	public static void main(String[] args) {
+		List<Integer> lista1 = new ArrayList<>();
+		lista1.add(1);
+		lista1.add(10);
+		lista1.add(9);
+		lista1.add(0);
+		lista1.add(100);
+		lista1.add(-20);
+		lista1.add(9);
+		lista1.add(10);
+		List<Integer> lista2 = new ArrayList<>();
+		lista2.add(5);
+		lista2.add(9);
+		lista2.add(0);
+		lista2.add(-10);
+		lista2.add(1000);
+		lista2.add(1);
+		lista2.add(-500);
+		lista2.add(1);
+		lista2.add(-17);
+		lista2.add(19);
+		
+		ComparaListas.Comparar(lista1, lista2);
+	
+	}
+}
