@@ -23,6 +23,45 @@ import java.util.List;
 import java.security.InvalidParameterException;
 
 public class ConversorMorse {
+	
+	public static void converterTexto(String texto, String[] english, String[] morse) {
+		//int a = 0;
+		char c = ' ';
+		String z = "";
+		//String x = "";
+		//int h = 0;
+		for(int i = 0; i< texto.length(); i++) {
+			c = texto.charAt(i);
+			z = "" + c;
+			for(int f = 0; f< english.length; f++) {
+				if(z.equalsIgnoreCase(english[f])) {
+					
+					//x += english.toString();
+					System.out.print(morse[f]);
+				}
+				
+			}
+		}
+		
+	}
+	
+
+	public static void converterCod(String texto, String[] english, String[] morse) {
+		String x = "";
+		for(int i = 0; i< texto.length(); i+=5){
+		    x = texto.substring(i, i+5);
+			//c = texto.substring(0, 4);
+    		for(int f = 0; f< morse.length; f++) {
+    			if(x.equals(morse[f])) {
+    					
+    				System.out.print(english[f]);
+    				
+    			}
+    		}
+		
+		}
+	}
+
 	public static void main(String[] args)
 	{
 	Scanner entrada = new Scanner(System.in); 
@@ -62,46 +101,5 @@ public class ConversorMorse {
 		}
 	}
 		converterCod(textoB, english, morse);
-			
-}
-	
-
-
-public static void converterTexto(String texto, String[] english, String[] morse) {
-		//int a = 0;
-		char c = ' ';
-		String z = "";
-		//String x = "";
-		//int h = 0;
-		for(int i = 0; i< texto.length(); i++) {
-			c = texto.charAt(i);
-			z = "" + c;
-			for(int f = 0; f< english.length; f++) {
-				if(z.equalsIgnoreCase(english[f])) {
-					
-					//x += english.toString();
-					System.out.print(morse[f]);
-				}
-				
-			}
-		}
-		
-	}
-	
-
-	public static void converterCod(String texto, String[] english, String[] morse) {
-		String x = "";
-		for(int i = 0; i< texto.length(); i+=5){
-		    x = texto.substring(i, i+5);
-			//c = texto.substring(0, 4);
-    		for(int f = 0; f< morse.length; f++) {
-    			if(x.equals(morse[f])) {
-    					
-    				System.out.print(english[f]);
-    				
-    			}
-    		}
-		
-		}
-	}
+	}		
 }
