@@ -3,7 +3,7 @@
     Entrada:
         "a"
     Saida:
-        ".-   "
+        ".-   " Lembrar dos espaços 
         
 - morse -> palavra -
     Entrada:
@@ -45,7 +45,7 @@ public class ConversorMorse {
 	String z = "";
 	for(int i = 0; i< texto.length(); i++){
 	    z = "" + letras[i];
-	    if(!qqString.contains(z)){
+	    if(!qqString.toLowerCase ().contains(z.toLowerCase ())){
 	        throw new InvalidParameterException("Palavra possui caracters invalidos");
 	    }
 	}
@@ -65,8 +65,8 @@ public class ConversorMorse {
 			
 }
 	
-	
-	
+
+
 public static void converterTexto(String texto, String[] english, String[] morse) {
 		//int a = 0;
 		char c = ' ';
